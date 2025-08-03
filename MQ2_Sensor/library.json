@@ -1,0 +1,33 @@
+{
+  "name": "MQ2",
+  "version": "0.0.0+20250730122250",
+  "description": "A FreeRTOS-compatible C library for ESP32 with Firebase integration, now includes MQ2 gas sensor support.",
+  "author": "BuiTannn",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "internal",
+    "rtdb": "internal",
+    "esp-idf": ">=4.4"
+  },
+  "components": {
+    "mq2": {
+      "description": "MQ2 gas sensor interface (CO, CH4, SMOKE) with PPM calculation.",
+      "header": "mq2.h",
+      "source": "mq2.c",
+      "gpio_support": [32, 33, 34, 35, 36, 37, 38, 39],
+      "methods": [
+        "mq2_init(gpio_num, rl_value, ro_value)",
+        "readMQ2PPM(gasType)"
+      ]
+    }
+  },
+  "keywords": [
+    "FreeRTOS",
+    "ESP32",
+    "MQ2",
+    "Gas Sensor",
+    "CO",
+    "CH4",
+    "Smoke"
+  ]
+}

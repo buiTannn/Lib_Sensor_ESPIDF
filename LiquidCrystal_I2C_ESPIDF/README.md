@@ -37,7 +37,21 @@ C library for controlling 16x2 LCD displays with I2C backpack using ESP-IDF.
 - Use I2C scanner if LCD address is unknown
 - Functions include appropriate timing delays - avoid rapid successive calls
 
+### Put your LCD value to Firebase
+Clone repo: https://github.com/buiTannn/Lib_Firebase_FreeRTOS and read tutorial
+
+## Example to put data use Firebase lib
+Putting text:
+```c
+firebase_put_data("/your/path/lcd", FB_STRING, "hello world");
+```
+Putting text and data: 
+```c
+int temperature = 25;
+firebase_put_data("/your/path/lcd", FB_STRING, "Temp = %d°C", temperature);
+```
 ## Troubleshooting
 - **No display of display some strange characters**: Check I2C address, verify wiring, ensure `lcd_clear()` is called
 - **Garbled text**: Verify I2C connections and pull-up resistors
+
 - **Init fails**: Check GPIO pin assignments and I2C address

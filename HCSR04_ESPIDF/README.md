@@ -46,6 +46,7 @@ Takes 3 measurements and returns the median value for improved accuracy.
 
 ## How It Works
 ![alt text](pulse.png)
+
 The HC-SR04 sensor operates using ultrasonic sound waves:
 
 Trigger: Send a 10μs HIGH pulse to the Trig pin
@@ -54,4 +55,5 @@ Echo Detection: Echo pin goes HIGH when sound is emitted, LOW when echo is recei
 Distance Calculation: Time duration of echo pulse corresponds to distance
 
 The sensor measures the time it takes for sound to travel to an object and back. Since sound travels at approximately 343 m/s, the distance formula becomes:
+
 Distance (cm) = Echo pulse duration (μs) / 58

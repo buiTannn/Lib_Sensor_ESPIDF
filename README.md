@@ -2,10 +2,11 @@
 
 This repository contains C libraries for interfacing ESP32 with various sensors and Firebase using the ESP-IDF framework.
 
-## Features
+## Sensor
 
-- 📟 LCD I2C: Display messages via I2C interface.
-- 🌫️ MQ2 Gas Sensor: Measure smoke, methane, and CO concentration.
+-  LCD I2C
+-  MQ2 Gas
+-  HCSR04
 ...
 ## Getting Started
 
